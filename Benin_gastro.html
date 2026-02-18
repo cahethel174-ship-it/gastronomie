@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>🇧🇯 Guide Complet de la Gastronomie Béninoise</title>
+    <style>
+        /* Styles pour rendre le site magnifique */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5dc;
+            color: #2c1810;
+            line-height: 1.6;
+        }
+
+        /* En-tête avec drapeau béninois */
+        .header {
+            background: linear-gradient(90deg, #008000 33%, #FFD700 33%, #FFD700 66%, #FF0000 66%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid #2c1810;
+        }
+
+            .header h1 {
+                font-size: 3.5em;
+                margin: 0;
+                text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+                background: rgba(0,0,0,0.5);
+                display: inline-block;
+                padding: 15px 40px;
+                border-radius: 60px;
+            }
+
+            .header p {
+                font-size: 1.5em;
+                margin-top: 20px;
+                background: rgba(0,0,0,0.3);
+                padding: 10px 20px;
+                border-radius: 40px;
+                display: inline-block;
+            }
+
+        /* Menu de navigation */
+        .menu {
+            background: #2c1810;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+            .menu a {
+                color: #FFD700;
+                text-decoration: none;
+                font-weight: bold;
+                margin: 0 10px;
+                font-size: 1.2em;
+                padding: 8px 20px;
+                border-radius: 30px;
+                transition: all 0.3s;
+                background: rgba(255,215,0,0.1);
+            }
+
+                .menu a:hover {
+                    background: #FFD700;
+                    color: #2c1810;
+                    transform: scale(1.05);
+                }
+
+        /* Sections */
+        .section {
+            background: white;
+            margin: 40px auto;
+            padding: 40px;
+            max-width: 1400px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 8px solid #008000;
+        }
+
+        h2 {
+            color: #008000;
+            border-bottom: 4px solid #FFD700;
+            padding-bottom: 15px;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+            h2::before {
+                content: "🇧🇯 ";
+            }
+
+        h3 {
+            color: #FF0000;
+            font-size: 2em;
+            margin: 30px 0 20px;
+            text-align: center;
+        }
+
+        /* Grilles pour les plats */
+        .grille-plats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        /* Cartes avec images */
+        .carte-plat {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,128,0,0.15);
+            border: 2px solid #FFD700;
+            transition: all 0.3s;
+        }
+
+            .carte-plat:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,128,0,0.3);
+            }
+
+            .carte-plat img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-bottom: 3px solid #FFD700;
+            }
+
+        .carte-contenu {
+            padding: 20px;
+        }
+
+        .carte-plat h4 {
+            color: #008000;
+            font-size: 1.8em;
+            margin: 0 0 10px;
+            text-align: center;
+        }
+
+        .badge {
+            background: #FF0000;
+            color: #FFD700;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #2c1810;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .prix {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #2c1810;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 1.1em;
+        }
+
+        .region {
+            color: #008000;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* Tableau */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 1.1em;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background: #008000;
+            color: #FFD700;
+            padding: 18px;
+            font-size: 1.2em;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #FFD700;
+            background: #fff9e6;
+        }
+
+        tr:hover td {
+            background: #FFD700;
+            color: #2c1810;
+        }
+
+        /* Formulaire */
+        .formulaire {
+            background: linear-gradient(135deg, #fff9e6, #ffffff);
+            padding: 50px;
+            border-radius: 30px;
+            border: 3px solid #008000;
+        }
+
+        .champ {
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #2c1810;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            font-size: 1.1em;
+            box-sizing: border-box;
+        }
+
+        .options-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            background: #fff9e6;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #008000, #006400);
+            color: #FFD700;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+            .btn:hover {
+                transform: scale(1.05);
+            }
+
+        footer {
+            background: #2c1810;
+            color: #FFD700;
+            text-align: center;
+            padding: 50px;
+            margin-top: 50px;
+        }
+
+        .statistiques {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat {
+            text-align: center;
+            background: #008000;
+            color: #FFD700;
+            padding: 30px;
+            border-radius: 15px;
+            font-size: 1.3em;
+        }
+
+            .stat span {
+                font-size: 2.5em;
+                display: block;
+                font-weight: bold;
+            }
+
+        /* Bouton retour haut */
+        #retour-haut {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #008000;
+            color: #FFD700;
+            padding: 15px 20px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.8em;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== EN-TÊTE ========== -->
+    <div class="header">
+        <h1>🇧🇯 LES DÉLICES DU BÉNIN 🇧🇯</h1>
+        <p>L'Encyclopédie Complète de la Cuisine Béninoise</p>
+    </div>
+
+    <!-- ========== MENU ========== -->
+    <div class="menu">
+        <a href="#accueil">🏠 ACCUEIL</a>
+        <a href="#plats">🍛 PLATS PRINCIPAUX</a>
+        <a href="#sauces">🌶️ SAUCES</a>
+        <a href="#accompagnements">🍚 ACCOMPAGNEMENTS</a>
+        <a href="#grillades">🍖 GRILLADES</a>
+        <a href="#boissons">🥤 BOISSONS</a>
+        <a href="#tableau">📊 TABLEAU</a>
+        <a href="#contact">📝 ENQUÊTE</a>
+    </div>
+
+    <!-- ========== ACCUEIL ========== -->
+    <div id="accueil" class="section">
+        <h2>🏝️ BIENVENUE AU FESTIVAL DES SAVEURS BÉNINOISES</h2>
+
+        <div style="display: flex; gap: 40px; align-items: center; margin-bottom: 30px;">
+            <div style="flex: 1; text-align: center;">
+                <img src="https://i.pinimg.com/1200x/85/e8/73/85e8738cfdaed63be9fc11e6659d5497.jpg"
+                     alt="Cuisine africaine"
+                     style="width: 100%; border-radius: 20px; border: 5px solid #FFD700;">
+                <p style="margin-top: 10px;"><i>Marché traditionnel au Bénin</i></p>
+            </div>
+            <div style="flex: 2;">
+                <p style="font-size: 1.5em; font-weight: bold; color: #008000;">Le Bénin vous invite à sa table !</p>
+                <p style="font-size: 1.3em;">Découvrez plus de <span style="color: #FF0000; font-weight: bold; font-size: 1.5em;">50 spécialités</span> traditionnelles qui font la fierté de tout un pays.</p>
+            </div>
+        </div>
+
+        <div class="statistiques">
+            <div class="stat"><span>15</span>Plats Principaux</div>
+            <div class="stat"><span>10</span>Sauces</div>
+            <div class="stat"><span>8</span>Accompagnements</div>
+            <div class="stat"><span>12</span>Boissons</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin: 40px 0;">
+            <img src="https://i.pinimg.com/736x/46/f6/82/46f6826e498971731694af885de54ea0.jpg"
+                 alt="Plat africain" style="width: 100%; border-radius: 15px;">
+            <img src="https://i.pinimg.com/1200x/57/01/9c/57019cca29f508489dead34135775dda.jpg"
+                 alt="Cuisine traditionnelle" style="width: 100%; border-radius: 15px;">
+        </div>
+
+        <div style="background: #FFD700; padding: 30px; border-radius: 15px; margin-top: 30px;">
+            <p style="font-size: 1.5em; font-style: italic; text-align: center; color: #2c1810;">
+                "La gastronomie béninoise, c'est l'âme d'un peuple généreux qui a fait de chaque repas une fête et de chaque plat un trésor transmis de génération en génération."
+            </p>
+            <p style="text-align: right; font-weight: bold;">— Chef Sébastien, Cotonou</p>
+        </div>
+    </div>
+
+    <!-- ========== PLATS PRINCIPAUX ========== -->
+    <div id="plats" class="section">
+        <h2>🍛 15 PLATS PRINCIPAUX TRADITIONNELS</h2>
+
+        <div class="grille-plats">
+            <!-- Plat 1 - Igname Pilée -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/6c/43/20/6c4320b620cae7a2ed0e60e880fdbc96.jpg" alt="Igname pilée">
+                <div class="carte-contenu">
+                    <h4>IGNAME PILÉE</h4>
+                    <div class="badge">⭐ PLAT NATIONAL</div>
+                    <div class="description">
+                        <p><b>LE plat des grandes occasions !</b> Igname cuite longuement puis pilée au mortier jusqu'à obtenir une pâte élastique et onctueuse. Servie avec une sauce arachide.</p>
+                        <p><i>Région :</i> Nord & Centre du Bénin</p>
+                        <p><i>Saison :</i> Fête de l'igname (août)</p>
+                    </div>
+                    <span class="prix">2000-5000 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 2 - Watché -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/75/65/30/75653083cdcc07943298469639d9a816.jpg" alt="Watché">
+                <div class="carte-contenu">
+                    <h4>WATCHÉ (ATASSI)</h4>
+                    <div class="badge">🔥 TRÈS POPULAIRE</div>
+                    <div class="description">
+                        <p><b>Riz et haricots</b> cuits à l'huile de palme rouge avec oignons et piment. Plat de rue par excellence, servi avec du poisson frit des oeufs et du fromage beninois.</p>
+                        <p><i>Région :</i> Tout le Bénin</p>
+                    </div>
+                    <span class="prix">500-1500 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 3 - Amiwo -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/6a/d7/1e/6ad71eadcba37bc8553803525438e43e.jpg" alt="Amiwo">
+                <div class="carte-contenu">
+                    <h4>AMIWO (PÂTE ROUGE)</h4>
+                    <div class="badge">SPÉCIALITÉ DU SUD</div>
+                    <div class="description">
+                        <p>Pâte de maïs rouge préparée avec <b>concentré de tomate et huile de palme</b>. Accompagne poissons et viandes en sauce.</p>
+                        <p><i>Région :</i> Sud Bénin</p>
+                    </div>
+                    <span class="prix">1000-2000 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 4 - Ablo -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/04/f8/02/04f802cd41e0dc1a1ea34380dea11d82.jpg" alt="Ablo">
+                <div class="carte-contenu">
+                    <h4>ABLO</h4>
+                    <div class="description">
+                        <p>Pâte de riz <b>fermentée</b> cuite à la vapeur, légèrement sucrée. Accompagne idéalement les sauces claires et le poisson braisé.</p>
+                        <p><i>Texture :</i> Légère et aérée</p>
+                    </div>
+                    <span class="prix">500-1000 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 5 - Akassa -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/ac/d9/aa/acd9aa0bdf25ffccb50464f0862bbb3e.jpg" alt="Akassa">
+                <div class="carte-contenu">
+                    <h4>AKASSA</h4>
+                    <div class="description">
+                        <p>Pâte de maïs fermentée, très populaire dans le sud. Base de l'alimentation quotidienne, se mange avec toutes les sauces.</p>
+                        <p><i>Accompagnement :</i> Sauce gombo, poisson</p>
+                    </div>
+                    <span class="prix">300-800 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 6 - Wassa-Wassa -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/736x/82/ae/5f/82ae5f2e5dcb3ffb04ef9febb8fa9c35.jpg" alt="Wassa-Wassa">
+                <div class="carte-contenu">
+                    <h4>WASSA-WASSA</h4>
+                    <div class="description">
+                        <p>Couscous d'igname, servie avec sauce légère aux légumes et poisson fumé. Rapide et délicieux.</p>
+                        <p><i>Origine :</i> Centre du Bénin</p>
+                    </div>
+                    <span class="prix">800-1500 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 7 - Kuli-Kuli -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/736x/31/cb/69/31cb69334af80abcfdb028f5db22084f.jpg" alt="Kuli-Kuli">
+                <div class="carte-contenu">
+                    <h4>KULI-KULI</h4>
+                    <div class="badge">SNACK PRÉFÉRÉ</div>
+                    <div class="description">
+                        <p>Galettes de cacahuètes frites a base d'arachide, ajoutées aux plats ou consommées comme snack. Donne du croquant.</p>
+                    </div>
+                    <span class="prix">100-500 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 8 - Yovo Doko -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/7e/95/4c/7e954c9d544a28fcb325457ca45d9f2b.jpg" alt="Yovo Doko">
+                <div class="carte-contenu">
+                    <h4>YOVO DOKO</h4>
+                    <div class="badge">BEIGNETS ROYAUX</div>
+                    <div class="description">
+                        <p>Beignets sucrés sale à de farine de blé , très populaires dans les rues de Cotonou. Parfaits pour le petit-déjeuner souvent servit seul ou avec de la bouillie.</p>
+                    </div>
+                    <span class="prix">100-500 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 9 - Pâte Arrosée -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/c4/6a/ca/c46aca5f6cca24f7866b3125b1e92f18.jpg" alt="Pâte Arrosée">
+                <div class="carte-contenu">
+                    <h4>PÂTE ARROSÉE</h4>
+                    <div class="description">
+                        <p>Pâte de maïs blanche servie avec sauce légère à la tomate et poisson fumé parfois la sauce crincrin. Simple mais savoureux.</p>
+                    </div>
+                    <span class="prix">500-1000 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 10 - Riz au Gras -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/5c/71/a3/5c71a3506fc569a8a976b3d2367ca5e3.jpg" alt="Riz au Gras">
+                <div class="carte-contenu">
+                    <h4>RIZ AU GRAS</h4>
+                    <div class="badge">PLAT DE FÊTE</div>
+                    <div class="description">
+                        <p>Riz cuit dans sauce tomate concentrée avec viande, légumes et épices. Indispensable dans les cérémonies.</p>
+                    </div>
+                    <span class="prix">1500-3000 FCFA</span>
+                </div>
+            </div>
+
+         
+                  <!-- Plat 11 - Gari -->
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/be/d5/fc/bed5fc633a98a5d799e566f195d3b991.jpg" alt="Gari">
+                <div class="carte-contenu">
+                    <h4>GARI</h4>
+                    <div class="description">
+                        <p>Semoule de manioc grillée, consommée avec du lait, du sucre ou incorporée dans les plats.</p>
+                    </div>
+                    <span class="prix">300-800 FCFA</span>
+                </div>
+            </div>
+
+            <!-- Plat 15 - Plat Royal -->
+            <div class="carte-plat" style="grid-column: span 2;">
+                <img src="https://shopafrico.com/wp-content/uploads/2021/05/photo_2021-04-30_21-00-47.jpg" alt="Plat Royal">
+                <div class="carte-contenu">
+                    <h4>👑 PLAT ROYAL : PÂTE + POISSON BRAISÉ</h4>
+                    <div class="badge">LE PLUS CONSOMMÉ</div>
+                    <div class="description">
+                        <p><b>Le plat emblématique du Bénin !</b> Pâte de maïs (Akassa ou Wô) accompagnée de poisson braisé (capitaine, carpe ou tilapia), sauce pimentée (Moyo) et légumes frais. On le trouve partout : des maquis populaires aux restaurants gastronomiques.</p>
+                    </div>
+                    <span class="prix">1000-3000 FCFA</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SAUCES ========== -->
+    <div id="sauces" class="section">
+        <h2>🌶️ 10 SAUCES TRADITIONNELLES</h2>
+
+        <div class="grille-plats">
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/736x/1f/c9/ce/1fc9ce855a1d73156a764e7eb15f1a85.jpg" alt="Sauce Arachide">
+                <div class="carte-contenu"><h4>SAUCE ARACHIDE</h4><div class="description">Onctueuse, à base de pâte d'arachide. Parfaite avec l'igname pilée.</div></div>
+            </div>
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/736x/6d/ce/b9/6dceb9575b01518df2f947319459f772.jpg" alt="Moyo">
+                <div class="carte-contenu"><h4>MOYO</h4><div class="description">Sauce fraîche tomates, oignons, piment, citron. Avec poisson grillé.</div></div>
+            </div>
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/9f/cb/25/9fcb25e6861777acfda7e9f8e1c81e2b.jpg" alt="Févi">
+                <div class="carte-contenu"><h4>FÉVI (GOMBO)</h4><div class="description">Sauce gluante au gombo, poisson fumé. Avec pâte de maïs.</div></div>
+            </div>
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/736x/7a/28/dd/7a28dd274b604a9910d07fc91f321831.jpg" alt="Man Tindjan">
+                <div class="carte-contenu"><h4>MAN TINDJAN</h4><div class="description">Légumes-feuilles, poisson fumé, huile de palme.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ACCOMPAGNEMENTS ========== -->
+    <div id="accompagnements" class="section">
+        <h2>🍚 8 ACCOMPAGNEMENTS</h2>
+
+        <div class="grille-plats">
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/736x/de/1a/1d/de1a1d9f9a533c49b49ee90f644a5dec.jpg" alt="Alloco">
+                <div class="carte-contenu"><h4>ALLOCO</h4><div class="description">Banane plantain frite, croustillante.</div></div>
+            </div>
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/736x/ef/94/73/ef947365c209220156124ab096c17e43.jpg" alt="Patates">
+                <div class="carte-contenu"><h4>PATATES DOUCES</h4><div class="description">Frites de patates douces.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== GRILLADES ========== -->
+    <div id="grillades" class="section">
+        <h2>🍖 7 GRILLADES</h2>
+
+        <div class="grille-plats">
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/736x/b7/bd/40/b7bd408a55088f0291ef5c2c5bf94aa0.jpg" alt="Poisson">
+                <div class="carte-contenu"><h4>POISSON BRAISÉ</h4><div class="description">Capitaine, carpe, tilapia marinés.</div></div>
+            </div>
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/1200x/0a/d7/1f/0ad71fdfb84d071054bb6a21c6d66978.jpg" alt="Poulet">
+                <div class="carte-contenu"><h4>POULET GRILLÉ</h4><div class="description">Brochettes marinées.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== BOISSONS ========== -->
+    <div id="boissons" class="section">
+        <h2>🥤 12 BOISSONS</h2>
+
+        <div class="grille-plats">
+            <div class="carte-plat">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs4YeilJSCsQcU54n3GyXYc5X8V3LYJo-K8Q&s" alt="Sodabi">
+                <div class="carte-contenu"><h4>SODABI</h4><div class="description">Eau-de-vie de vin de palme.</div></div>
+            </div>
+            <div class="carte-plat">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS0WXtr6wcezU4AZaPh5Ri5Bp3_WVIE-co6w&s" alt="Tchoukoutou">
+                <div class="carte-contenu"><h4>TCHOUKOUTOU</h4><div class="description">Bière de mil du nord.</div></div>
+            </div>
+            <div class="carte-plat">
+                <img src="https://i.pinimg.com/736x/0f/8c/e1/0f8ce137fd8350c0c5769a349a1759c3.jpg" alt="Bissap">
+                <div class="carte-contenu"><h4>BISSAP</h4><div class="description">Jus d'hibiscus rouge.</div></div>
+            </div>
+            <div class="carte-plat">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqJRGPlk_5dBjIpZE-4vV7XPLwAO3KY6UoJQ&s" alt="Vin de Palme">
+                <div class="carte-contenu"><h4>VIN DE PALME</h4><div class="description">Jus frais de palmier.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TABLEAU ========== -->
+    <div id="tableau" class="section">
+        <h2>📊 TABLEAU COMPARATIF</h2>
+
+        <table>
+            <tr><th>Catégorie</th><th>Nom</th><th>Région</th><th>Prix (FCFA)</th><th>Note</th></tr>
+            <tr><td rowspan="4"><b>Plats</b></td><td>Igname Pilée</td><td>Nord</td><td>2000-5000</td><td>⭐⭐⭐⭐⭐</td></tr>
+            <tr><td>Watché</td><td>Tout pays</td><td>500-1500</td><td>⭐⭐⭐⭐⭐</td></tr>
+            <tr><td>Amiwo</td><td>Sud</td><td>1000-2000</td><td>⭐⭐⭐⭐</td></tr>
+            <tr><td>Riz au Gras</td><td>Tout pays</td><td>1500-3000</td><td>⭐⭐⭐⭐⭐</td></tr>
+            <tr><td rowspan="3"><b>Sauces</b></td><td>Arachide</td><td>Nord</td><td>500-1000</td><td>⭐⭐⭐⭐⭐</td></tr>
+            <tr><td>Gombo</td><td>Sud</td><td>500-1000</td><td>⭐⭐⭐⭐</td></tr>
+            <tr><td>Moyo</td><td>Côte</td><td>200-500</td><td>⭐⭐⭐⭐⭐</td></tr>
+        </table>
+    </div>
+
+    <!-- ========== FORMULAIRE ========== -->
+    <div id="contact" class="section">
+        <h2>📝 ENQUÊTE GASTRONOMIQUE</h2>
+
+        <div class="formulaire">
+            <form action="mailto:contact@gastronomie-benin.bj" method="post" enctype="text/plain">
+                <div class="champ">
+                    <label>1. Quel est votre nom ?</label>
+                    <input type="text" name="Nom" placeholder="Votre nom complet" required>
+                </div>
+
+                <div class="champ">
+                    <label>2. Votre adresse email</label>
+                    <input type="email" name="Email" placeholder="exemple@email.com" required>
+                </div>
+
+                <div class="champ">
+                    <label>3. Vous êtes :</label>
+                    <div class="options-group">
+                        <div><input type="radio" name="Groupe" value="Touriste"> Touriste</div>
+                        <div><input type="radio" name="Groupe" value="Béninois"> Béninois</div>
+                        <div><input type="radio" name="Groupe" value="Chef"> Chef/Cuisinier</div>
+                    </div>
+                </div>
+
+                <div class="champ">
+                    <label>4. Plats déjà goûtés</label>
+                    <div class="options-group">
+                        <div><input type="checkbox" name="Plat" value="Igname"> Igname Pilée</div>
+                        <div><input type="checkbox" name="Plat" value="Watche"> Watché</div>
+                        <div><input type="checkbox" name="Plat" value="Amiwo"> Amiwo</div>
+                        <div><input type="checkbox" name="Plat" value="Poisson"> Poisson Braisé</div>
+                    </div>
+                </div>
+
+                <div class="champ">
+                    <label>5. Boisson préférée</label>
+                    <select name="Boisson">
+                        <option>Sodabi</option>
+                        <option>Tchoukoutou</option>
+                        <option>Bissap</option>
+                        <option>Vin de Palme</option>
+                    </select>
+                </div>
+
+                <div class="champ">
+                    <label>Suggestions ?</label>
+                    <textarea name="Suggestions" rows="4" placeholder="Vos idées..."></textarea>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="submit" class="btn">🍽️ ENVOYER</button>
+                    <button type="reset" class="btn" style="background: #8B4513;">🗑️ EFFACER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========== PIED DE PAGE ========== -->
+    <footer>
+        <p style="font-size: 3em;">🇧🇯</p>
+        <p style="font-size: 1.8em;">Guide Complet de la Gastronomie Béninoise</p>
+        <p>Plus de 50 spécialités • 15 plats • 10 sauces • 12 boissons</p>
+        <p>📧 contact@gastronomie-benin.bj</p>
+        <p>© 2026 - Tous droits réservés</p>
+    </footer>
+
+    <a href="#" id="retour-haut">⬆️</a>
+
+</body>
+</html>
